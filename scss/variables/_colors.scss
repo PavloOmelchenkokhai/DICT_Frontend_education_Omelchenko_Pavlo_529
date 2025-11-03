@@ -2,3 +2,106 @@ $main-color: #2c3e50;
 $secondary-color: #3498db;
 $grey: #8e8e8e;
 $red: #FF3A3A;
+
+$primary: #1d1d1d;
+$primary-light: #f8f8f8;
+$red: #ff3b39;
+$red-hover: #ff1a18;
+$grey: #7c7c7c;
+$silver: #bfbfbf;
+
+:root {
+  --primary-color: #{$primary};
+  --primary-text-color: #{$primary-light};
+  --red-color: #{$red};
+  --red-hover-color: #{$red-hover};
+  --grey-color: #{$grey};
+  --silver-color: #{$silver};
+}
+[data-theme="light"] {
+  --primary-color: #{$primary-light};
+  --primary-text-color: #{$primary};
+  --red-color: #{$red};
+  --red-hover-color: #{$red-hover};
+  --grey-color: #{$grey};
+  --silver-color: #{$silver};
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+  max-width: $widedesk;
+  margin: 0 auto;
+}
+a {
+  color: var(--red-color);
+
+  &:hover {
+    color: var(--red-hover-color);
+    text-decoration: underline;
+  }
+
+  &.secondary-text {
+    color: var(--grey-color);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid transparent;
+
+  &--primary {
+    background-color: var(--red-color);
+    color: var(--primary-text-color);
+
+    &:hover {
+      background-color: var(--red-hover-color);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--red-color);
+    border-color: var(--red-color);
+
+    &:hover {
+      background-color: var(--red-hover-color);
+      color: var(--primary-color);
+    }
+  }
+}
+
+.text--secondary {
+  color: var(--grey-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--silver-color);
+}
+
+.button {
+  background: var(--red-color);
+  color: var(--primary-text-color);
+  width: fit-content;
+  padding: 7px 14px;
+  border-radius: 5px;
+  margin: 40px 0;
+  border: 1px solid var(--red-color);
+  p {
+    margin: 0;
+  }
+  &:hover {
+    background: var(--red-hover-color);
+    border-color: var(--red-hover-color);
+  }
+  &:focus {
+    background: var(--primary-color);
+  }
+}
