@@ -1,0 +1,119 @@
+/* Базові стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+/*  Header */
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+}
+
+/*  Навігація  */
+.navigation {
+  background-color: #ddd;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+/*  Основна частина  */
+.content {
+  padding: 30px;
+  background-color: #fff;
+}
+
+.main-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.main-section p {
+  margin-bottom: 25px;
+}
+
+/*  Основна сітка   */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/*  Контент  */
+.main-content {
+  background-color: #fefefe;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h3 {
+  margin-top: 0;
+}
+
+/*  Sidebar  */
+.sidebar {
+  background-color: #eee;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*  Галерея  */
+.gallery {
+  margin-top: 20px;
+}
+
+.gallery h4 {
+  margin-bottom: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/*  Footer  */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 20px;
+  font-size: 1rem;
+}
