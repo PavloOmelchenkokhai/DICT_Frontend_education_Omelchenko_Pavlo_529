@@ -249,6 +249,78 @@ body {
   font-family: Arial, sans-serif;
 }
 
+body {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+@media (min-width: 796px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 22px;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -384,6 +456,63 @@ body {
   display: block;
 }
 
+nav {
+  width: calc(100% - 292px);
+  display: flex;
+}
+nav .burger-menu {
+  margin-left: auto;
+  width: fit-content;
+}
+nav .burger-menu .menu-toggle {
+  margin: 0;
+}
+nav .main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  font-weight: bold;
+}
+nav .main-menu .menu-link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+nav .main-menu.show {
+  display: flex;
+  position: absolute;
+  top: 53px;
+  width: 90%;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+}
+
+/*  ДЕСKTOПИ  */
+@media (min-width: 1200px) {
+  header nav {
+    justify-content: center;
+  }
+  header nav .burger-menu {
+    display: none;
+  }
+  header nav .main-menu {
+    display: flex;
+  }
+}
+/* ПЛАНШЕТИ */
+@media (min-width: 796px) {
+  .main-menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 /* Контакти */
 .contacts {
   background: #1b1b1b;
