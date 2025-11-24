@@ -3,3 +3,23 @@
   border-radius: 20px;
   border: 1px solid $grey;
 }
+
+@import "../variables/breakpoints";
+
+@mixin tablet {
+  @media (min-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $bp-laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
