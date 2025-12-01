@@ -1,129 +1,79 @@
-/* Контакти */
-.contacts {
-  background: #1b1b1b; // темний фон
-  color: #fff;
-  padding: 60px 20px;
+footer {
+  background: #1d1d1d;
+  padding: 40px 0;
   text-align: center;
+  color: #fff;
 
-  h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #444;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-
-  p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 40px;
-  }
-
-  &-info {
+  .footer-inner {
     display: flex;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-    text-align: left;
+    flex-direction: column;
+    gap: 20px;
 
-    .contact-block {
-      min-width: 220px;
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
-      h3 {
+      h4 {
+        margin: 0;
         font-size: 18px;
-        margin-bottom: 10px;
         color: #fff;
       }
 
-      p {
-        margin: 5px 0;
-        font-size: 15px;
-      }
-
-      small {
-        font-size: 13px;
-        color: #888;
-      }
-
-      a,
-      p {
-        color: #ff3b3b;
+      a, p {
+        color: $grey;
         text-decoration: none;
+        font-size: 14px;
       }
+    }
+  }
 
-      a:hover {
-        text-decoration: underline;
-      }
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: $silver;
+  }
+}
 
-      .social-icons {
-        display: flex;
-        gap: 15px;
-        margin-top: 10px;
+@include tablet {
+  footer {
+    .footer-inner {
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
 
-        a {
-          display: inline-block;
-          width: 32px;
-          height: 32px;
-
-          img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s;
-
-            &:hover {
-              transform: scale(1.2);
-            }
-          }
-        }
+      .footer-section {
+        text-align: left;
       }
     }
   }
 }
 
+@include laptop {
+  footer {
+    padding: 50px 0;
 
-/*Нижній контитул сайту*/
-.footer {
-  background: #1c1c1c;
-  color: #fff;
-  padding: 40px 0;
-  font-size: 14px;
+    .footer-inner {
+      gap: 60px;
+    }
+  }
 }
 
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+@include desktop {
+  footer {
+    padding: 60px 0;
 
-.footer-left,
-.footer-center,
-.footer-right {
-  flex: 1;
-  padding: 10px;
-}
+    .footer-inner {
+      gap: 80px;
 
-.footer-center {
-  text-align: center;
-}
-
-.footer-logo {
-  max-width: 120px;
-  margin-bottom: 10px;
-}
-
-.footer .socials {
-  margin-top: 10px;
-}
-
-.footer .socials a {
-  margin: 0 5px;
-  display: inline-block;
-}
-
-.footer a {
-  color: #ff3333;
-  text-decoration: none;
+      .footer-section {
+        h4 {
+          font-size: 20px;
+        }
+        a, p {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
