@@ -1,79 +1,129 @@
-footer {
-  background: #1d1d1d;
-  padding: 40px 0;
-  text-align: center;
+/* Контакти */
+.contacts {
+  background: #1b1b1b; // темний фон
   color: #fff;
+  padding: 60px 20px;
+  text-align: center;
 
-  .footer-inner {
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #444;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 40px;
+  }
+
+  &-info {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    text-align: left;
 
-    .footer-section {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .contact-block {
+      min-width: 220px;
 
-      h4 {
-        margin: 0;
+      h3 {
         font-size: 18px;
+        margin-bottom: 10px;
         color: #fff;
       }
 
-      a, p {
-        color: $grey;
+      p {
+        margin: 5px 0;
+        font-size: 15px;
+      }
+
+      small {
+        font-size: 13px;
+        color: #888;
+      }
+
+      a,
+      p {
+        color: #ff3b3b;
         text-decoration: none;
-        font-size: 14px;
       }
-    }
-  }
 
-  .footer-bottom {
-    margin-top: 20px;
-    font-size: 12px;
-    color: $silver;
-  }
-}
-
-@include tablet {
-  footer {
-    .footer-inner {
-      flex-direction: row;
-      justify-content: center;
-      gap: 40px;
-
-      .footer-section {
-        text-align: left;
+      a:hover {
+        text-decoration: underline;
       }
-    }
-  }
-}
 
-@include laptop {
-  footer {
-    padding: 50px 0;
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
 
-    .footer-inner {
-      gap: 60px;
-    }
-  }
-}
+        a {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
 
-@include desktop {
-  footer {
-    padding: 60px 0;
+          img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
 
-    .footer-inner {
-      gap: 80px;
-
-      .footer-section {
-        h4 {
-          font-size: 20px;
-        }
-        a, p {
-          font-size: 15px;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
       }
     }
   }
+}
+
+
+/*Нижній контитул сайту*/
+.footer {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer .socials {
+  margin-top: 10px;
+}
+
+.footer .socials a {
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.footer a {
+  color: #ff3333;
+  text-decoration: none;
 }
